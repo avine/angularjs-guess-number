@@ -5,7 +5,7 @@ const concat = require('gulp-concat');
 const server = require('gulp-server-livereload');
 
 gulp.task('clean', function() {
-  return gulp.src('./dist', { read: false })
+  return gulp.src('./dist/', { read: false, allowEmpty: true })
     .pipe(clean());
 });
 
