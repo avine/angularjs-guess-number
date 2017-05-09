@@ -21,7 +21,15 @@ gulp.task('copy-ng', function() {
     .pipe(gulp.dest('./dist/vendor'));
 });
 
-gulp.task('copy', gulp.series('copy-src', 'copy-ng'));
+gulp.task('copy-bs', function() {
+  return gulp.src([
+      './bower_components/bootstrap/dist/css/bootstrap.min.css',
+      './bower_components/bootstrap/dist/css/bootstrap-theme.min.css'
+    ])
+    .pipe(gulp.dest('./dist/vendor'));
+});
+
+gulp.task('copy', gulp.series('copy-src', 'copy-ng', 'copy-bs'));
 
 gulp.task('webserver', function() {
   gulp.src('./dist/')

@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "angular": "^1.6.4",
-    "angular-timeline": "^1.7.0"
+    "angular-timeline": "^1.7.0",
+    "bootstrap": "^3.3.7"
   }
 }

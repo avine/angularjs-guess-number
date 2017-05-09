@@ -1,14 +1,25 @@
 
-<form ng-if="!$ctrl.success">
-  <input type="number" step="1" min="1" max="999" ng-model="$ctrl.input" />
-  <button ng-click="$ctrl.submit()">Submit</button>
-</form>
+<div class="row" ng-if="!$ctrl.success">
+  <div class="col-md-6">
+    <form class="form-inline">
+      <div class="form-group">
+        <input class="form-control" type="number" step="1" min="1" max="999" ng-model="$ctrl.input" />
+        <button class="form-control btn btn-primary" ng-click="$ctrl.submit()">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <table class="table table-striped">
+      <tr ng-repeat="item in $ctrl.lastResults" ng-class="item.css">
+        <th>{{ item.input }}</th>
+        <td>{{ item.info }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
 
-<ul ng-if="!$ctrl.success">
-  <li ng-repeat="item in $ctrl.lastResults">
-    {{ item.input }}
-    <span>{{ item.info }}</span>
-  </li>
-</ul>
-
-<h2 ng-if="$ctrl.success">You won in {{ $ctrl.elapsedTime }} seconds !</h2>
+<div class="row" ng-if="$ctrl.success">
+  <div class="col-md-12">
+    <div ng-if="$ctrl.success" class="alert alert-success">You won in {{ $ctrl.elapsedTime }} seconds !</div>
+  </div>
+</div>

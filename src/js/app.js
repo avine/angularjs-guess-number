@@ -27,13 +27,14 @@ angular.module('app').component('guessNumber', {
       if (this.lastResults.length >= 5) {
         this.lastResults = [];
       }
-      if (!this.lastResults.includes(this.input)) {
+      if (this.input) {
         this.lastResults.unshift({
           input: this.input,
-          info: this.input > result ? 'too high' : 'too low'
+          info: this.input > result ? 'too high' : 'too low',
+          css: this.input > result ? 'danger' : 'warning'
         });
+        this.input = '';
       }
-      this.input = '';
     };
 
   }],
