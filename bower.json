@@ -1,0 +1,21 @@
+{
+  "name": "angularjs-guess-number",
+  "description": "The purpose of the game is to guess a number.",
+  "main": "index.js",
+  "authors": [
+    "Stéphane Francel <contact@avine.io>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/avine/angularjs-guess-number",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-timeline": "^1.7.0"
+  }
+}
