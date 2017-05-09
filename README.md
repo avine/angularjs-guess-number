@@ -6,7 +6,7 @@ To test the app, execute the following commands:
 ### Install `npm` and `bower` packages
 
 ```bash
-npm run install # npm install && bower install
+npm run inst # npm install && bower install
 ```
 
 ### Build the app in `./dist/` directory
