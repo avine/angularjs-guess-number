@@ -31,7 +31,9 @@ gulp.task('copy-bs', function() {
 
 gulp.task('copy', gulp.series('copy-src', 'copy-ng', 'copy-bs'));
 
-gulp.task('webserver', function() {
+gulp.task('default', gulp.series('clean', 'copy'));
+
+gulp.task('start', function() {
   gulp.src('./dist/')
     .pipe(server({
       host: '127.0.0.1',
@@ -39,5 +41,3 @@ gulp.task('webserver', function() {
       open: true
     }));
 });
-
-gulp.task('default', gulp.series('clean', 'copy'));
