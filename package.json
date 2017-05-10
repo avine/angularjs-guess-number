@@ -4,7 +4,6 @@
   "description": "The purpose of the game is to guess a number.",
   "main": "index.js",
   "scripts": {
-    "inst": "npm install && bower install",
     "build": "gulp",
     "start": "gulp start",
     "test": "echo \"Error: no test specified\" && exit 1"
